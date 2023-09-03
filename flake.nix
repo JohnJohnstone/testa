@@ -32,19 +32,20 @@
             };
         });
 
-        devShell = pkgs.mkShell {
-          nativeBuildInputs = with pkgs; [
+        devShell = nixpkgs.mkShell {
+
+          nativeBuildInputs = with nixpkgs; [
             (pkgs.rust-bin.stable.latest.default.override {
                   extensions = [ "rust-src" "cargo" "rustc" ];
             })
             gcc
           ];
 
-          RUST_SRC_PATH = "${pkgs.rust-bin.stable.latest.default.override {
+          RUST_SRC_PATH = "${nixpkgs.rust-bin.stable.latest.default.override {
               extensions = [ "rust-src" ];
           }}/lib/rustlib/src/rust/library";
 
-          buildInputs = with pkgs; [
+          buildInputs = with nixpkgs; [
             openssl.dev
             glib.dev
             pkg-config
@@ -54,6 +55,6 @@
             just
           ];
         };
-        devShells.default = devShell;
+        # devShells.default = devShell;
     };
 }

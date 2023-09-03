@@ -1,5 +1,5 @@
 {
-  description = "A devShell example";
+  description = "testa devShell and package";
 
   inputs = {
     nixpkgs.url      = "github:NixOS/nixpkgs/nixos-unstable";

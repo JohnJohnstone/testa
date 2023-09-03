@@ -33,7 +33,7 @@
             alias find=fd
           '';
         };
-        packages.default = 
+        packages.testa = 
             rustPlatform.buildRustPackage {
                 name = "testa";
                 src = ./.;

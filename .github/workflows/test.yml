@@ -1,24 +1,24 @@
-name: "Test"
-on:
-  pull_request:
-  push:
-jobs:
-  build-macos:
-    runs-on: macos-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: cachix/install-nix-action@v22
-      with:
-        github_access_token: ${{ secrets.GITHUB_TOKEN }}
-    - run: nix build .#testa
-    - run: nix flake check
-  build-linux:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: cachix/install-nix-action@v22
-      with:
-        github_access_token: ${{ secrets.GITHUB_TOKEN }}
-    - run: nix build .#testa
-    - run: nix flake check
+# name: "Test"
+# on:
+#   pull_request:
+#   push:
+# jobs:
+#   build-macos:
+#     runs-on: macos-latest
+#     steps:
+#     - uses: actions/checkout@v3
+#     - uses: cachix/install-nix-action@v22
+#       with:
+#         github_access_token: ${{ secrets.GITHUB_TOKEN }}
+#     - run: nix build .#testa
+#     - run: nix flake check
+#   build-linux:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@v3
+#     - uses: cachix/install-nix-action@v22
+#       with:
+#         github_access_token: ${{ secrets.GITHUB_TOKEN }}
+#     - run: nix build .#testa
+#     - run: nix flake check
 

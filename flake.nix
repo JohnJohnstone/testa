@@ -23,7 +23,14 @@
             pkg-config
             exa
             fd
-            rust-bin.beta.latest.default
+            # rust-bin.stable.latest.default
+            (rust-bin.stable.latest.default.override {
+              targets = [
+                "armv7-linux-androideabi"
+                "aarch64-linux-android"
+                "x86_64-pc-windows-gnu"
+              ];
+            })
             clippy
             rust-analyzer
           ];

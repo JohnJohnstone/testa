@@ -18,6 +18,9 @@
       with pkgs;
       {
         devShells.default = mkShell {
+
+          CARGO_TARGET_X86_64_PC_WINDOWS_GNU_RUSTFLAGS = "-L native=${windows.pthreads}/lib";
+
           buildInputs = [
             openssl
             pkg-config

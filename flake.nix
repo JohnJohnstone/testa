@@ -34,6 +34,7 @@
             clippy
             rust-analyzer
             wine64
+            pkgsCross.mingwW64.stdenv.cc
           ];
 
           shellHook = ''

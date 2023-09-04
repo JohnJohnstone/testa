@@ -33,6 +33,7 @@
             })
             clippy
             rust-analyzer
+            mingw-w64
           ];
 
           shellHook = ''

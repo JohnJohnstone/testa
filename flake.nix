@@ -28,7 +28,8 @@
               targets = [
                 "armv7-linux-androideabi"
                 "aarch64-linux-android"
-                "x86_64-pc-windows-gnu"
+                # "x86_64-pc-windows-gnu"
+                "x86_64-w64-mingw32-gcc"
               ];
             })
             clippy
